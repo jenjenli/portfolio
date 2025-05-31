@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { keyframes, styled } from 'styled-components';
 import About from './About';
+import Expereince from './Experience';
 
 declare global {
   interface Window {
@@ -94,6 +95,9 @@ export function Main() {
       <AboutSection ref={aboutRef}>
         <About />
       </AboutSection>
+      <ExpereinceSection>
+        <Expereince/>
+      </ExpereinceSection>
     </MainContainer>
   );
 }
@@ -203,7 +207,12 @@ const SlideLeft = styled.h2`
 `;
 
 const AboutSection = styled.div`
-  min-height: 100vh;
+  max-height: 100vh;
+  background: white;
+  padding: 4rem 2rem;
+`;
+const ExpereinceSection = styled.div`
+  max-height: 100vh;
   background: white;
   padding: 4rem 2rem;
 `;

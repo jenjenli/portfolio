@@ -8,17 +8,11 @@ export default function About() {
       <ContentWrapper>
         <Headshot src="/IMG_1798.JPG" alt="Jenny's Headshot" />
         <AboutText>
-          Hey there! I'm a senior at Boston University, majoring in Computer Science and 
-          on an exciting journey to become a software engineer. I love building things with 
-          code—whether it's a small tool to make life easier or a full-blown app that solves 
-          real-world problems. Over the past few years, I've dived into everything from web 
-          development to algorithms, and I've had so much fun learning along the way. What 
-          draws me to software engineering is the perfect mix of creativity and logic. I'm 
-          always curious, always learning, and always looking for new ways to grow. 
-          Whether I'm working solo or collaborating with a team, I bring energy, focus, 
-          and a genuine enthusiasm for building cool things that make an impact. When I'm 
-          not coding, you can probably find me exploring new tech, grabbing coffee with friends,
-          or trying to debug life one step at a time ☕💻.
+          Hey there! I am currently a senior at Boston University studying Computer Science with a 
+          passion for building impactful applications. I love the blend of creativity and 
+          logic in software engineering—whether I'm developing web apps, diving into algorithms,
+           or collaborating on team projects. When I'm not coding, you'll find me exploring new 
+           tech, grabbing matcha with friends, or debugging life one step at a time ☕💻.
         </AboutText>
       </ContentWrapper>
     </AboutContainer>

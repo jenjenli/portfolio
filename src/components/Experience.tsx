@@ -1,52 +1,101 @@
+import * as React from 'react';
 import styled from 'styled-components';
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import FastfoodIcon from '@mui/icons-material/Fastfood';
+import LaptopMacIcon from '@mui/icons-material/LaptopMac';
+import HotelIcon from '@mui/icons-material/Hotel';
+import RepeatIcon from '@mui/icons-material/Repeat';
+import Typography from '@mui/material/Typography';
 
-const MainWrapper = styled.main`
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 98%;
-    margin: 0 auto;
-    background-color: rgba(199, 196, 196, 0.78);
-    padding: 2vh 1vw;
-`;
-
-const MainTitle = styled.h2`
-    margin: 2vw 0;
-    text-align: center;
-    font-size: calc(2px + 2vw);
-    color: rgb(0, 0, 0);
-`;
-
-const StyledImage = styled.img`
-    align-self: center;
-    width: 30%; 
-`;
-
-const MainContent = styled.div`
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 0 auto;
-`;
-
-const StyledParagraph = styled.p`
-    margin: 0 auto;
-    font-size: calc(2px + 1vw);
-`;
 export default function Expereince() {
-    return (
-        <MainWrapper>
-            <MainTitle>Home Page</MainTitle>
-            <StyledImage src="/images/IMG_9329.JPG" alt="Image of Jenny" />
-            <MainContent id="main">
-                <StyledParagraph>
-                    My name is Jenny Li. I am currently a junior studying Computer Science at Boston University.
-                    In the future, I want to be a Software Engineer and develop web applications to help other people. My hobbies include
-                    playing the piano, gaming, and reading.
-                    Please explore this page to learn more about me and my experience!
-                </StyledParagraph>
-            </MainContent>
-        </MainWrapper>
-    );
+  return (
+    <Timeline position="alternate">
+        <Title> Experience</Title>
+      <TimelineItem>
+        <TimelineOppositeContent
+          sx={{ m: 'auto 0' }}
+          align="right"
+          variant="body2"
+          color="text.secondary"
+        >
+          9:30 am
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineConnector />
+          <TimelineDot>
+            <FastfoodIcon />
+          </TimelineDot>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent sx={{ py: '12px', px: 2 }}>
+          <Typography variant="h6" component="span">
+            Eat
+          </Typography>
+          <Typography>Because you need strength</Typography>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineOppositeContent
+          sx={{ m: 'auto 0' }}
+          variant="body2"
+          color="text.secondary"
+        >
+          10:00 am
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineConnector />
+          <TimelineDot color="primary">
+            <LaptopMacIcon />
+          </TimelineDot>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent sx={{ py: '12px', px: 2 }}>
+          <Typography variant="h6" component="span">
+            Code
+          </Typography>
+          <Typography>Because it&apos;s awesome!</Typography>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineConnector />
+          <TimelineDot color="primary" variant="outlined">
+            <HotelIcon />
+          </TimelineDot>
+          <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
+        </TimelineSeparator>
+        <TimelineContent sx={{ py: '12px', px: 2 }}>
+          <Typography variant="h6" component="span">
+            Sleep
+          </Typography>
+          <Typography>Because you need rest</Typography>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
+          <TimelineDot color="secondary">
+            <RepeatIcon />
+          </TimelineDot>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent sx={{ py: '12px', px: 2 }}>
+          <Typography variant="h6" component="span">
+            Repeat
+          </Typography>
+          <Typography>Because this is the life you love!</Typography>
+        </TimelineContent>
+      </TimelineItem>
+    </Timeline>
+  );
 }
+
+const Title = styled.h1`
+  text-align: center;
+  color: black;`;
