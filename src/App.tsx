@@ -1,5 +1,3 @@
-import {Routes, Route, createBrowserRouter, RouterProvider} from "react-router-dom";
-import Nav from "./components/Nav";
 import { Main } from './components/Main';
 import styled from "styled-components";
 // const StyledDiv =styled.div`
